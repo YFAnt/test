@@ -8,16 +8,12 @@
         <li>
           <router-link to="/subapp/app1"> app1 </router-link>
         </li>
-        <li>
-          <router-link to="/subapp/app1/about"> app/about </router-link>
+        <li @click="push('/subapp/app1/about')">
+          app/about
         </li>
-        <li>
-          <router-link to="/subapp/app2/exception/404"> /subapp/exception/404s</router-link>
-        </li>
-        <li>
-          <router-link to="/subapp/app2/system/config"> system/config </router-link>
-        </li>
-       
+        <li @click="push('/subapp/app2/users')">
+           /subapp/exception/404
+        </li> 
       </ul>
     </div>
     <div class="header">这是一个header</div>
@@ -33,6 +29,11 @@
 
 export default {
   name: "Home",
+  methods:{
+    push(item){
+      this.$router.push(item)
+    }
+  }
 };
 </script>
 

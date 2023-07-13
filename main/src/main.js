@@ -21,6 +21,7 @@ registerMicroApps([
 ]);
 
 start();
+window.router = router
 
 new Vue({
   router,
